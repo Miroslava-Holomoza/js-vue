@@ -27,16 +27,16 @@
 
 //______________________________________________
 
-let parityNumber = prompt('Enter number: ');
-let result;
-if (parityNumber % 2 == 0) {
-    result = 'Even';
-}
-else {
-    result = 'Odd';
-}
+// let Number = prompt('Enter number: ');
+// let result;
+// if (Number % 2 == 0) {
+//     result = 'Even';
+// }
+// else {
+//     result = 'Odd';
+// }
 
-alert(result);
+// alert(result);
 
 //______________________________________________
 
@@ -75,33 +75,33 @@ alert(result);
 
 //______________________________________________
 
-let dayNumber = +prompt("Enter a number of day:");
+// let dayNumber = +prompt("Enter a number of day:");
 
-switch (dayNumber) {
-    case 1:
-        alert("Monday");
-        break;
-    case 2:
-        alert("Tuesday");
-        break;
-    case 3:
-        alert("Wednesday");
-        break;
-    case 4:
-        alert("Thursday");
-        break;
-    case 5:
-        alert("Friday");
-        break;
-    case 6:
-        alert("Saturday");
-        break;
-    case 7:
-        alert("Sunday");
-        break;
-    default:
-        alert("Invalid day number!");
-}
+// switch (dayNumber) {
+//     case 1:
+//         alert("Monday");
+//         break;
+//     case 2:
+//         alert("Tuesday");
+//         break;
+//     case 3:
+//         alert("Wednesday");
+//         break;
+//     case 4:
+//         alert("Thursday");
+//         break;
+//     case 5:
+//         alert("Friday");
+//         break;
+//     case 6:
+//         alert("Saturday");
+//         break;
+//     case 7:
+//         alert("Sunday");
+//         break;
+//     default:
+//         alert("Invalid day number!");
+// }
 
 //______________________________________________
 
@@ -143,9 +143,7 @@ switch (deliveryType) {
         break;
     default:
         deliveryPrice = 0;
-        alert('Invalid delivery type');
+        alert('Немає такої доставки');
 }
-
 totalPrice += deliveryPrice;
-
 console.log(`Total price: ${totalPrice}`);
