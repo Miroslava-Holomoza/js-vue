@@ -1,0 +1,48 @@
+let cars = 0;
+let electro = 0;
+let sum = 0;
+let max = 0;
+
+for (let i = 1; i <= 7; i++) {
+    let hours = +prompt("Введіть кількість годин стоянки:");
+
+    if (hours === 0) {
+        break;
+    }
+
+    if (hours < 0 || hours > 12) {
+        console.log("Неправильна кількість годин");
+        i--
+        continue;
+    }
+    let type = prompt("Введіть тип автомобіля(звичайний або електромобіль): ");
+    let price = 0;
+
+    if (type === "звичайний") {
+        price = hours * 40;
+    }
+    else if (type === "електромобіль") {
+        price = hours * 30;
+        electro++;
+    }
+    else {
+        console.log("Неправильний тип автомобіля");
+        continue;
+    }
+
+    if (hours > 5) {
+        price = price * 0.8;
+    }
+
+    cars++;
+    sum = sum + price;
+
+    if (price > max) {
+        max = price;
+    }
+}
+
+console.log("Кількість автомобілів: " + cars);
+console.log("Кількість електромобілів: " + electro);
+console.log("Загальна сума: " + sum);
+console.log("Найбільша оплата: " + max);

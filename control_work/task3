@@ -1,0 +1,22 @@
+const correctPin = 6767;
+let attempts = 0;
+
+while (attempts < 3) {
+    let userPin = +prompt("Введіть PIN:");
+
+    if (userPin === correctPin) {
+        console.log("Доступ дозволено");
+        break;
+    }
+    else {
+        attempts++;
+
+        if (attempts < 3) {
+            console.log("Залишилося спроб: " + (3 - attempts));
+        }
+    }
+}
+
+if (attempts === 3) {
+    console.log("Доступ заблоковано");
+}

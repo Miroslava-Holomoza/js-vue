@@ -1,0 +1,36 @@
+let student = +prompt("Введіть кількість учнів:");
+let sum = 0;
+let goodGrade = 0;
+let badGrade = 0;
+let maxGrade = 0;
+
+for (let i = 1; i <= student; i++) {
+    let grade = +prompt("Введіть оцінку учня №" + i);
+
+    if (grade < 1 || grade > 12) {
+        console.log("Неправильна оцінка");
+        i--;
+        continue;
+    }
+
+    sum = sum + grade;
+
+    if (grade >= 7) {
+        goodGrade++;
+    }
+    else {
+        badGrade++;
+    }
+
+    if (grade > maxGrade) {
+        maxGrade = grade;
+    }
+}
+
+let average = sum / student;
+
+console.log("Сума: " + sum);
+console.log("Середня: " + average);
+console.log("Оцінок 7 і вище: " + goodGrade);
+console.log("Оцінок нижче 7: " + badGrade);
+console.log("Найбільша оцінка: " + maxGrade);
